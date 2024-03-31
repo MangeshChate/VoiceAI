@@ -15,7 +15,7 @@ function App() {
         try {
             setLoading(true);
             const apiUrl = "https://chatpostapp-23srkaehza-uc.a.run.app/palm2";
-            const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+            
 
             const headersList = {
                 "Content-Type": "application/json",
@@ -26,7 +26,7 @@ function App() {
             });
 
             const reqOptions = {
-                url: proxyUrl + apiUrl,
+                url: apiUrl,
                 method: "POST",
                 headers: headersList,
                 data: bodyContent,
@@ -52,7 +52,7 @@ function App() {
     return (
         <div className="min-h-screen bg-gray-900 text-white flex justify-center items-center p-3">
             <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-lg p-8">
-                <h1 className="text-2xl lg:text-3xl font-bold mb-4">Voice AI App</h1>
+                <h1 className="text-xl lg:text-3xl font-bold mb-4">Voice AI Application</h1>
                 <div className="flex flex-col gap-4">
                     <input
                         type="text"
